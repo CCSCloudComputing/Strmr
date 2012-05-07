@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'nokogiri'
-
+require 'FileStreamer.rb'
 class ITunesParser
   def initialize(filename)
     @filename = filename
@@ -31,6 +31,9 @@ class ITunesParser
   def result
     @result
   end
+end
+
+class SongList
 end
 
 file_name = "/Users/roeschinc/Music/iTunes/iTunes Music Library.xml"
