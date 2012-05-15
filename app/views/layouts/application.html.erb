@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Strmr</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <title>Strmr | <%= yield(:title) %></title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <%= yield %>
+
+  <%= javascript_include_tag "application" %>
+  <!-- TODO -->
+  <%# yield :javascript_includes %>
 
 </body>
 </html>

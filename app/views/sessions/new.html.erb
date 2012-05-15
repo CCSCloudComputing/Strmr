@@ -1,0 +1,18 @@
+<% provide(:title, 'Log In') %>
+
+<%= form_tag(sessions_path, class: "well login-form") do %>
+
+  <%= label_tag :email %>
+  <%= text_field_tag :email %>      
+    
+  <%= label_tag :password %>                            
+  <%= password_field_tag :password%>
+
+  <!--<label class="checkbox">-->         
+  <%= check_box_tag :remember_me, 1 %>
+  Remember Me
+  <!--</label>-->
+
+  <%= submit_tag "Log in", class: "", id: "" %>
+
+<% end %>
