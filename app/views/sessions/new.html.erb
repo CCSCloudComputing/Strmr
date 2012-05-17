@@ -8,10 +8,10 @@
       <h1 class="form-title">Strmr</h1>
 
       <%= label_tag :email %>
-      <%= text_field_tag :email %>      
+      <%= text_field_tag :email, "admin@admin.com" %>      
         
       <%= label_tag :password %>                            
-      <%= password_field_tag :password%>
+      <%= password_field_tag :password, "admin" %>
      
       <%= check_box_tag :remember_me, 1 %>
       Remember Me
@@ -19,6 +19,12 @@
       <%= submit_tag "Log in", class: "btn", id: "submit-login" %>
 
     <% end %>
+
+    <!-- 
+      TEMPORARY - we can't really fake login in development because otherwise all the current_user checks
+      throw a nil exception
+    -->
+    <p style="margin-top: 10px; float: right; color: red;">Email: admin@admin.com Pass: admin</p>
 
   </div>
 </div>
