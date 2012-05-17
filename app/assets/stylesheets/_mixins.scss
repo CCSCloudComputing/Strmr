@@ -1,3 +1,17 @@
+@mixin bluebutton {
+  @include border-radius(5px);
+  background-color: #119EE7;
+  border: 1px solid #0099E6;
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+
+  &:hover {
+    background-color: #08c;
+    text-decoration: none;
+  }
+}
+
 @mixin clearfix {
   // http://nicolasgallagher.com/micro-clearfix-hack/
   *zoom: 1;

@@ -1,0 +1,39 @@
+.form-title {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+
+form {
+  @include border-box;
+  @include clearfix;
+  background-color: white;
+  border: 1px solid $light-gray;
+  padding: 20px;
+
+  label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  input:not([type="submit"]) {
+    @include border-box;
+    border: 1px solid $light-gray;
+    margin-bottom: 15px;
+    padding: 7px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input[type="submit"] {
+    float: right;
+  }
+
+  input[type="checkbox"] {
+    margin: -2px 5px 0 0;
+    width: auto;
+  }
+}

@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+admin_user = User.create(
+  first_name: "Admin",
+  last_name: "User",
+  email: "admin@admin.com",
+  password: "admin",
+  password_confirmation: "admin"
+)
+
+seed_group = Group.create(
+  title: "Seed Group",
+  password: "password",
+  password_confirmation: "password"
+)
+
+seed_group.initialize_owner admin_user
+seed_group.users << admin_user

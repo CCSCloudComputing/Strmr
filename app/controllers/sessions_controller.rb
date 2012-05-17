@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
         cookies[:auth_token] = user.auth_token
       end
 
-      redirect_to root_url # TODO
+      redirect_to groups_path # TODO - set a real route
 
     else
       flash.now[:error] = "Invalid email or password"

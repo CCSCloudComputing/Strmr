@@ -1,0 +1,27 @@
+<% provide(:title, 'Create Group') %>
+
+<div class="row">
+  <div class="span-6 offset-5">
+
+    <%= form_for(@group, html: {class: "new-group-form"}) do |f| %>
+      <h1 class="form-title">Create New Group</h1>
+
+      <%= render "group_error_messages" %>      
+
+      <%= f.label :title %>
+      <!--<span class="help-text">Describe your group!</span>-->
+      <%= f.text_field :title %>
+
+      <%= f.label :password %>
+      <!--<span class="help-text">People will need this to join your group.</span>-->
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= submit_tag "Create Group", class: "btn btn-primary", id: "submit-validate" %>
+
+    <% end %><!-- .new-group-form -->
+
+  </div>
+</div>

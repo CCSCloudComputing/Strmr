@@ -28,8 +28,8 @@ class User < ActiveRecord::Base
   # Associations
   #------------------------------
   # TODO - Groups
-  #has_and_belongs_to_many :groups
-  #has_many :owned, :class_name => "Group", :foreign_key => "owner_id"
+  has_and_belongs_to_many :groups
+  has_many :owned, :class_name => "Group", :foreign_key => "owner_id"
 
 
   before_save :generate_auth_token

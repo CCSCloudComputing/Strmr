@@ -1,0 +1,37 @@
+<% provide(:title, 'Sign Up') %>
+
+<%# content_for :javascript_includes do %>
+  <%# javascript_include_tag "mailcheck" %>
+<%# end %>
+
+<div class="row">
+
+  <div class="span-6 offset-5">
+
+    <h1 class="main-title">Strmr</h1>
+
+   <%= form_for(@user, html: {class: "signup-form"}) do |f| %>
+      <h1 class="form-title">Sign Up</h1>
+      
+      <%= render "signup_error_messages" %>      
+
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>            
+
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>            
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>            
+
+      <!-- <div id="hint"></div> -->
+          
+      <%= f.label :password %>                            
+      <%= f.password_field :password %>
+
+      <%= submit_tag "Sign Up", class: "btn", id: "submit-signup" %>
+
+    <% end %><!-- .signup-form -->
+
+  </div><!-- .signup-container -->
+</div>

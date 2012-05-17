@@ -1,0 +1,27 @@
+<% provide(:title, "Edit Group: #{@group.title}") %>
+
+<div class="row">
+  <div class="">
+
+    <%= form_for(@group, url: {action: 'update', id: @group.gid}, html: {class: "edit-group-form"}) do |f| %>
+
+      <h1 class="form-title">Edit Group</h1>
+
+      <%= render "group_error_messages" %>      
+
+      <%= f.label :title %>                
+      <%= f.text_field :title %>
+
+      <%= f.label :password, "New Password" %>               
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirm New Password" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= link_to "Cancel", groups_path, class: "btn btn-cancel" %>
+      <%= submit_tag "Update Group", class: "btn" %>
+
+    <% end %><!-- .edit-group-form -->
+
+  </div>
+</div>

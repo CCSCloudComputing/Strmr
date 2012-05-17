@@ -1,0 +1,42 @@
+/* 
+
+This is a manifest file that imports the listed stylesheets and compresses down to a single file, making things fast and sexy.
+
+*/
+
+//-- LIB/IMPORTS
+//------------------------------------
+//= require cheeky.min
+@import "variables";
+@import "mixins";
+
+@import "forms";
+@import "groups";
+
+
+//-- LAYOUT
+//------------------------------------
+body {
+  background-color: #f9f9f9;
+  font-family: 'Helvetica Neue';
+  color: $gray-text;
+}
+
+.container {
+  margin: 25px auto;
+}
+
+
+//-- TYPOGRAPHY
+//------------------------------------
+.main-title {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+
+//-- LIB CLASSES
+//------------------------------------
+.btn {
+  @include bluebutton;
+}
