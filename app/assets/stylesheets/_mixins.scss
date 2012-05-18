@@ -5,11 +5,22 @@
   color: white;
   display: inline-block;
   padding: 5px 10px;
-
+  
   &:hover {
     background-color: #08c;
     text-decoration: none;
   }
+}
+
+@mixin whitebox {
+  // A pretty white box with a light gray border
+  // Things such as padding can easily be overridden
+
+  @include border-box;
+  @include clearfix;
+  background-color: white;
+  border: 1px solid $med-gray;
+  padding: 20px;
 }
 
 @mixin clearfix {

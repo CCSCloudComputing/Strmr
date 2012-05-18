@@ -29,14 +29,39 @@ body {
 
 //-- TYPOGRAPHY
 //------------------------------------
+// Headers
 .main-title {
   font-size: 3em;
   margin-bottom: 20px;
 }
 
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+// Links
+a {
+  color: $blue;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 
 //-- LIB CLASSES
 //------------------------------------
+// Buttons
 .btn {
   @include bluebutton;
 }
+
+.btn-large {
+  padding: 10px;
+}
+
+// Positioning
+.left { float: left; }
+.right { float: right; }

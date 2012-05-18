@@ -1,7 +1,7 @@
 <% provide(:title, 'Groups Overview') %>
 
 <div class="row">
-  <div class="span-8 offset-2">
+  <div class="span-10 offset-3">
 
     <h1>Your Groups</h1>
 
@@ -10,21 +10,23 @@
     <div class="groups-container">
       <% @groups.each do |group| %>
         <div class="group">
-          <span>ID: <%= group.gid %></span>
+          <%= link_to group.title, group_path(group.gid), class: "group-title" %>
 
-          <%= link_to group.title, group_path(group.gid) %>
+          <% if current_user == group.owner %>
+            <span class="group-owner">You own this group.</span>
+          <% else %>            
+            <span class="group-owner">Owned by <%= group.owner.full_name %></span>
+          <% end %>
 
-            <% if current_user == group.owner %>
-              <span class="group-owner">You own this group.</span>
-            <% else %>            
-              <span class="group-owner">Owned by <%= group.owner.full_name %></span>
-            <% end %> 
+          <span class="group-gid">ID: <%= group.gid %></span>
 
+          <div class="right">
             <%#
               Group Action Buttons
                 - Edit/Delete if group is owned,
                 - else Leave Group
             %>
+          
             <%  if current_user == group.owner %>
 
               <%= link_to "Edit", edit_group_path(group.gid), class: "btn" %>
@@ -43,13 +45,16 @@
               } %>
 
             <% end %>
-          
+          </div>
+
         </div><!-- .group -->
       <% end %>
     </div>
 
-    <%= link_to "Create a new group", new_group_path, class: "btn btn-large" %>
-    <%= link_to "Join another group", join_group_path, class: "btn btn-large" %>
+    <div class="right">
+      <%= link_to "Create a new group", new_group_path, class: "btn btn-large" %>
+      <%= link_to "Join another group", join_group_path, class: "btn btn-large" %>
+    </div>
 
   </div>
 </div>
