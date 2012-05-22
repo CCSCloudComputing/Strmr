@@ -1,7 +1,7 @@
 <% provide(:title, "Group: #{@group.title}") %>
 
 <% if @group.users.count == 1 && current_user == @group.owner %>
-  <%# render 'group_welcome' %>
+  <%= render 'group_welcome' %>
 <% else %>
 
   <div class="row">
