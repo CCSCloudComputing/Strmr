@@ -12,12 +12,14 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(params[:group])
     @group.initialize_owner(current_user)
+
     if @group.save
       redirect_to group_path(@group.gid)
     else
       flash.now[:error] = "Something went wrong - please check your fields and try again."
       render :new
     end
+    
   end
 
 
