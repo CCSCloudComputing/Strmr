@@ -1,7 +1,7 @@
 .groups-container {
   @include whitebox;
   margin-bottom: 15px;
-  padding: 5px;
+  padding: 0;
 }
 
 .groups-container + .right a:last-child {
@@ -10,7 +10,12 @@
 
 .group {
   @include clearfix;
-  padding: 5px;
+  border-bottom: 1px dashed $med-gray;
+  padding: 10px;
+
+  &:last-of-type {
+    border: none;
+  }
 
   .group-gid,
   .group-title, 
@@ -40,4 +45,25 @@
 .group-back {
   // 'Back to Groups' in Group#show
   margin-bottom: 15px;
+}
+.group-welcome {
+  // Landing page after group creation
+  @include whitebox;
+  text-align: center;
+
+  h1 {
+    margin: 5px 0;
+  }
+
+  h1 + p {
+    margin-bottom: 20px;
+  }
+
+  .btn:first-of-type {
+    float: left;
+  }
+
+  .btn:last-of-type {
+    float: right;
+  }
 }
