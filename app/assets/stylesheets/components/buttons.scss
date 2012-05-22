@@ -1,7 +1,7 @@
 .btn {
   // Dark gray w/ blue hover by default
   @include border-radius(5px);
-  background-color: $dark-gray; 
+  background-color: $gray-text;
   border: 1px solid $dark-gray;
   color: white;
   display: inline-block;
@@ -9,6 +9,7 @@
 
   &:hover {
     background-color: $blue;
+    border-color: #0099E6;
     text-decoration: none;
   }
 
