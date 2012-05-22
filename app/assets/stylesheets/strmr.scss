@@ -18,11 +18,12 @@ This is a manifest file that imports the listed stylesheets and compresses down 
 //------------------------------------
 body {
   background-color: #f9f9f9;
-  font-family: 'Helvetica Neue';
   color: $gray-text;
+  font-family: 'Helvetica Neue';
 }
 
 .container {
+  outline: 1px solid red;
   margin: 25px auto;
 }
 
