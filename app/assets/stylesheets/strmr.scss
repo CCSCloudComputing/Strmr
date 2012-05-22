@@ -13,6 +13,7 @@ This is a manifest file that imports the listed stylesheets and compresses down 
 @import "forms";
 @import "groups";
 @import "components/control_bar";
+@import "components/footer";
 
 
 //-- LAYOUT
@@ -24,7 +25,6 @@ body {
 }
 
 .container {
-  outline: 1px solid red;
   margin: 25px auto;
 }
 
@@ -57,8 +57,19 @@ a {
 //------------------------------------
 // Buttons
 .btn {
-  @include bluebutton;
+  @include border-radius(5px);
+  background-color: #119EE7;
+  border: 1px solid #0099E6;
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+
+  &:hover {
+    background-color: #08c;
+    text-decoration: none;
+  }
 }
+
 
 .btn-large {
   padding: 10px;
