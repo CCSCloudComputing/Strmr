@@ -1,11 +1,11 @@
 <footer class="container">
   <div class="row">
     <div class="span-16">
+      
       <% if !signed_in? %>
         <p style="color: red; margin-bottom: 5px;">Warning: You are not signed in (Not checking in dev)</p>
       <% end %>
-      <span>(Temporary):</span>
-      <%= link_to "Log Out", logout_path %>
+      
     </div>
   </div>
 </footer> 

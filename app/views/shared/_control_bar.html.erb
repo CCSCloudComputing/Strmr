@@ -1,7 +1,10 @@
 <% if signed_in? %>
   <div id="control-bar">
     <div class="container">
-      Control bar here
+
+      <div class="site-actions">
+        <%= link_to "Log Out", logout_path %>
+      </div>
     </div>
   </div>
 <% end %>

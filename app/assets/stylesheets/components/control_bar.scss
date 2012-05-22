@@ -6,4 +6,22 @@
   .container {
     margin: 0 auto;
   }
+
+  .site-actions {
+    @include clearfix;
+    float: right;
+
+    a {
+      display: inline-block;
+      font-size: 0.9em;
+      padding: 12px 10px;
+
+      &:hover {
+        background-color: $blue;
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+  }
 }
