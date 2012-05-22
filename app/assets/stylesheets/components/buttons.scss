@@ -1,14 +1,14 @@
 .btn {
-  // Buttons are blue by default
+  // Dark gray w/ blue hover by default
   @include border-radius(5px);
-  background-color: #119EE7;
-  border: 1px solid #0099E6;
+  background-color: $dark-gray; 
+  border: 1px solid $dark-gray;
   color: white;
   display: inline-block;
-  padding: 5px 10px;
+  padding: 6px 10px;
 
   &:hover {
-    background-color: #08c;
+    background-color: $blue;
     text-decoration: none;
   }
 
@@ -17,8 +17,18 @@
   }
 
 
-  &.btn-plain {
-    // Plain gray
+  &.btn-blue {
+    background-color: $blue;
+    border: 1px solid #0099E6;
+
+    &:hover {
+      background-color: #08c;
+    }
+  }
+
+
+  &.btn-light {
+    // Light gray
     background-color: $light-gray;
     border-color: darken($med-gray, 5);
     color: lighten($gray-text, 15);
