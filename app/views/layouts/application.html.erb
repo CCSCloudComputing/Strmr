@@ -7,15 +7,26 @@
 </head>
 <body>
 
-  <div class="container control-bar">
-    test
+  <% if signed_in? %>
+  <div id="control-bar">
+    <div class="container">test</div>
   </div>
+  <% end %>
 
   <div class="container">
 
     <%= yield %>
 
+    <div class="row">
+      <div class="span-16" style="text-align: center; margin-top: 50px;">
+        <span style="">(Temporary): </span>
+        <%= link_to "Log Out", logout_path %>
+      </div>
+    </div>
+
   </div>
+
+
 
   <%= javascript_include_tag "application" %>
   <%# yield :javascript_includes %><!-- FOR LATER -->

@@ -7,11 +7,12 @@ This is a manifest file that imports the listed stylesheets and compresses down 
 //-- LIB/IMPORTS
 //------------------------------------
 //= require cheeky.min
-@import "variables";
-@import "mixins";
+@import "lib/variables";
+@import "lib/mixins";
 
 @import "forms";
 @import "groups";
+@import "components/control_bar";
 
 
 //-- LAYOUT
