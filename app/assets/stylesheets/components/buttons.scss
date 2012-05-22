@@ -1,0 +1,46 @@
+.btn {
+  // Buttons are blue by default
+  @include border-radius(5px);
+  background-color: #119EE7;
+  border: 1px solid #0099E6;
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+
+  &:hover {
+    background-color: #08c;
+    text-decoration: none;
+  }
+
+  &.btn-large {
+    padding: 10px;
+  }
+
+
+  &.btn-plain {
+    // Plain gray
+    background-color: $light-gray;
+    border-color: darken($med-gray, 5);
+    color: lighten($gray-text, 15);
+
+    &:hover {
+      background-color: lighten($med-gray, 10);
+      border-color: lighten($gray-text, 40);
+      color: lighten($gray-text, 5);
+    }
+  }
+
+
+  &.btn-red {
+    // Danger!
+    background-color: $light-red;
+    border-color: lighten($dark-red, 20);
+    color: $dark-red;
+
+    &:hover {
+      background-color: darken($light-red, 5);
+      border-color: lighten($dark-red, 10);
+    }
+  }
+
+}

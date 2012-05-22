@@ -10,6 +10,7 @@ This is a manifest file that imports the listed stylesheets and compresses down 
 @import "lib/variables";
 @import "lib/mixins";
 @import "components/alerts";
+@import "components/buttons";
 @import "components/control_bar";
 @import "components/footer";
 
@@ -57,26 +58,5 @@ a {
 
 //-- LIB CLASSES
 //------------------------------------
-// Buttons
-.btn {
-  @include border-radius(5px);
-  background-color: #119EE7;
-  border: 1px solid #0099E6;
-  color: white;
-  display: inline-block;
-  padding: 5px 10px;
-
-  &:hover {
-    background-color: #08c;
-    text-decoration: none;
-  }
-}
-
-
-.btn-large {
-  padding: 10px;
-}
-
-// Positioning
 .left { float: left; }
 .right { float: right; }

@@ -29,7 +29,7 @@
           
             <%  if current_user == group.owner %>
 
-              <%= link_to "Edit", edit_group_path(group.gid), class: "btn" %>
+              <%= link_to "Edit", edit_group_path(group.gid), class: "btn btn-plain" %>
               <%= link_to "Delete", {action: 'destroy', id: group.gid }, {
                 :method => :delete, 
                 confirm: "Are you sure you want to delete this group? This action cannot be undone.", 
@@ -41,7 +41,7 @@
               <%= link_to "Leave Group - TODO", {action: 'leave', id: group.gid }, {
                 :method => :delete,        
                 confirm: "Are you sure you want to leave? You can join again later, but all your expenses will be reset.", 
-                class: "btn btn-danger pull-right",
+                class: "btn btn-plain",
               } %>
 
             <% end %>

@@ -7,6 +7,14 @@
     margin: 0 auto;
   }
 
+  a {
+    color: white;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   .site-actions {
     @include clearfix;
     float: right;
@@ -18,8 +26,6 @@
 
       &:hover {
         background-color: $blue;
-        color: white;
-        text-decoration: none;
       }
     }
 
