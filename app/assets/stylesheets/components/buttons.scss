@@ -10,6 +10,7 @@
   &:hover {
     background-color: lighten($blue, 45);
     border-color: $blue;
+    cursor: pointer;
     text-decoration: none;
   }
 
@@ -17,8 +18,10 @@
     padding: 10px;
   }
 
+  //----- Various colored buttons
 
   &.btn-blue {
+    // Blue with white text
     background-color: $blue;
     border: 1px solid #0099E6;
     color: white;
@@ -29,16 +32,7 @@
   }
 
 
-  // &.btn-light {
-  //   // Light gray
-    
-
-  //   &:hover {
-      
-  //   }
-  // }
-
-  .btn-dark {
+  &.btn-dark {
     // Dark gray w/ blue hover
     background-color: $gray-text;
     border: 1px solid $dark-gray;
